@@ -22,28 +22,49 @@ const colors = [
 
 const typesScoreDiv = document.querySelector('.type-score-div');
 
+const createTypeContainer = (index) => {
+    const typeDiv = document.createElement('div');
+    typeDiv.style.backgroundColor = colors[index].secondary;
+    return typeDiv;
+}
+const createIconAndTextContainer = () => {
+    const typeImgAndTextDiv = document.createElement('div')
+    return typeImgAndTextDiv;
 
+}
+const createImageTag = (type) => {
+    const typeImg = document.createElement('img');
+    typeImg.setAttribute('src', type.icon);
+    return typeImg
 
+}
+const createTextTag = (type, index) => {
+
+    const typetext = document.createElement('p');
+    typetext.style.color = colors[index].primary;
+    typetext.innerText = type.category;
+    return typetext
+}
+
+const createScoreText = (type) => {
+    const typeScore = document.createElement('span')
+    typeScore.innerHTML = `<span>${type.score}</span> / 100`;
+    return typeScore
+}
 
 fetch('data.json').then(response => {
     response.json().then(types => {
         types.map((type, index) => {
-            const typeDiv = document.createElement('div');
-            typeDiv.style.backgroundColor = colors[index].secondary
-            const typeImgAndTextDiv = document.createElement('div')
-            const typeImg = document.createElement('img');
-            typeImg.setAttribute('src', type.icon);
-            const typetext = document.createElement('p');
-            typetext.style.color = colors[index].primary;
-
-            typetext.innerText = type.category;
-            const typeScore = document.createElement('span')
-            typeScore.innerHTML = `<span>${type.score}</span> / 100`;
-            typeImgAndTextDiv.appendChild(typeImg);
-            typeImgAndTextDiv.appendChild(typetext);
-            typeDiv.appendChild(typeImgAndTextDiv);
-            typeDiv.appendChild(typeScore);
-            typesScoreDiv.appendChild(typeDiv);
+            const scoreTypeContainer = createTypeContainer(index);
+            const iconAndTextContainer = createIconAndTextContainer();
+            const icon = createImageTag(type);
+            const typeText = createTextTag(type, index);
+            const scoreText = createScoreText(type);
+            iconAndTextContainer.appendChild(icon);
+            iconAndTextContainer.appendChild(typeText);
+            scoreTypeContainer.appendChild(iconAndTextContainer);
+            scoreTypeContainer.appendChild(scoreText);
+            typesScoreDiv.appendChild(scoreTypeContainer);
 
         })
     })
