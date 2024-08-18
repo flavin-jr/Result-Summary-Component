@@ -11,6 +11,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width: 100%;
 }
 
 
@@ -18,7 +19,8 @@ body {
     display: flex;
     background-color: white;
     border-radius: 32px;
-    width: 51.1%;
+    width: 736px;
+
 }
 
 .left-content {
@@ -109,7 +111,8 @@ button {
     color: white;
     font-size: 1.125rem;
     font-weight: bold;
-    padding: 16.5px 106.5px;
+    width: 100%;
+    height: 56px;
 
 }
 
