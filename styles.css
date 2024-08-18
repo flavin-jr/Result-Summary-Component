@@ -4,3 +4,158 @@
     box-sizing: border-box;
     font-family: "Hanken Grotesk", sans-serif;
 }
+
+body {
+    background-color: #ECF2FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.main-div {
+    display: flex;
+    background-color: white;
+    border-radius: 32px;
+    width: 51.1%;
+}
+
+.left-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    border-radius: 32px;
+    background: linear-gradient(180deg, #7755FF 0%, #6943FF 0%, #533AF7 38%, #2F2CE9 100%);
+    /* background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%)); */
+
+    text-align: center;
+    padding-left: 54px;
+    padding-right: 54px;
+    padding-top: 38px;
+    padding-bottom: 46px;
+}
+
+.left-content>h2 {
+    color: #CAC9FF;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.left-content .score-div {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    /* background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0)); */
+    background: linear-gradient(180deg, #4D21C9 0%, rgba(37, 33, 201, 0) 100%);
+    padding: 60px;
+
+}
+
+.left-content .score-div>p {
+    color: white;
+    font-size: 4.5rem;
+    font-weight: 800;
+
+}
+
+.left-content .score-div>span {
+    color: #CAC9FF;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-top: -10px;
+}
+
+.left-content .score-description>h1 {
+    font-size: 2rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.left-content .score-description>p {
+    font-size: 1.125rem;
+    color: #CAC9FF;
+    font-weight: 500;
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 38px;
+    padding-bottom: 46px;
+}
+
+.right-content {
+    color: #303B59;
+    font-weight: bold;
+}
+
+button {
+    border: none;
+    border-radius: 128px;
+    background-color: #303B59;
+    color: white;
+    font-size: 1.125rem;
+    font-weight: bold;
+    padding: 16.5px 106.5px;
+
+}
+
+button:hover {
+    cursor: pointer;
+    background: linear-gradient(180deg, #7755FF 0%, #6943FF 0%, #533AF7 38%, #2F2CE9 100%);
+
+}
+
+.type-score-div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 28px;
+    margin-bottom: 41px;
+}
+
+.type-score-div>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 16px;
+    border-radius: 12px;
+
+}
+
+.type-score-div>div>div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.type-score-div>div>div>p {
+    font-size: 1.125rem;
+    font-weight: 500;
+
+}
+
+.type-score-div>div>span {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: rgb(127, 138, 153);
+}
+
+.type-score-div>div>span>span {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #303B59;
+}
